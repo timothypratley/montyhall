@@ -1,0 +1,6 @@
+^{:auto-bundle :webpack}
+{:main montyhall.main
+ ;; If stuck on an advanced compile name
+ ;;:pseudo-names true
+ ;;:pretty-print true
+ }
