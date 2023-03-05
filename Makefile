@@ -35,12 +35,12 @@ open:
 	gh run watch && ${OPEN} https://timothypratley.github.io/montyhall || ${OPEN} https://github.com/timothypratley/montyhall
 
 deploy: min
-	cd resources/public
-	rm -fr .git
-	git init
-	git add .
-	git commit -m "Deploy to GitHub Pages"
-	git push --force --quiet "git@github.com:timothypratley/montyhall.git" main:gh-pages
-	rm -fr .git
+	cd resources/public && \
+	rm -fr .git && \
+	git init && \
+	git add . && \
+	git commit -m "Deploy to GitHub Pages" && \
+	git push --force --quiet "git@github.com:timothypratley/montyhall.git" main:gh-pages && \
+	rm -fr .git && \
 	echo https://timothypratley.github.io/montyhall
 
